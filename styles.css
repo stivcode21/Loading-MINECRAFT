@@ -1,0 +1,118 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    border: 0;
+}
+
+@font-face {
+    font-family: 'Minecraft Regular';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Minecraft Regular'), url('font/2_MinecraftItalic1.woff') format('woff');
+    }
+
+body {
+    background-color: #000000e4;
+}
+
+/*--- ALINEACION DE ITEMS ---*/
+.flex-container {
+    display: flex;
+    height: 80vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*--- LOGO ---*/
+.logo-banner img {
+    width: 900px;
+    margin-bottom: -55px;
+}
+
+
+/*--- LOADING GIF---*/
+.gif-loading img{
+    width: 70px;
+    border-radius: 100%;
+    margin-bottom: 35px;
+    animation: desaparecer 1s linear;
+    animation-delay: 8s;
+    animation-fill-mode: forwards;
+}
+
+/*---BARRA ANIMADA---*/
+
+.bar-loading {
+    border: 2px solid #fff;
+    width: 40%;
+}
+
+.bar {
+    padding: 8px;
+    width: 5%;
+    background-color: #fff;
+    margin: 3px;
+    animation: loading-animation 8.5s linear;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+.bar-loading {
+    animation: desaparecer 1s linear;
+    animation-delay: 8s;
+    animation-fill-mode: forwards;
+}
+
+/*   CONTADOR -  0 A 100   */
+
+.contador {                         /*CONTAINER CONTADOR*/
+    position: relative;
+}
+
+.numero {
+    font-size: 1.3rem;
+    color: #fff;
+    font-family: 'Minecraft Regular';
+    position: absolute;
+    left: -18px;
+    animation: desaparecer 1s linear;
+    animation-delay: 8s;
+    animation-fill-mode: forwards;
+}
+
+/* valor % */
+
+.percentage{
+    font-family: 'Minecraft Regular';
+    color: #fff;
+    font-size: 1.3rem;
+    position: absolute;
+    right: -20px;
+    animation: desaparecer 1s linear;
+    animation-delay: 7.3s;
+    animation-fill-mode: forwards;
+}
+
+
+/*   ANIMACIONES   */
+
+@keyframes loading-animation {
+    from {
+        width: 5%;
+    }
+
+    to {
+        width: 99%;
+    }
+}
+
+@keyframes desaparecer {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
